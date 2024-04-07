@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    let params = new URLSearchParams(location.search);
+    if(params.get('state')=="Success"){
+      alert("Ordered Successfully");
+      var newURL = location.href.split("?")[0];
+      window.history.pushState('object', document.title, newURL);
+    }
+  </script>
+  <title>JIIT CAFE</title>
+  <link rel="icon" href="img/jiit cafe logo.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background: #343a40">
+  <nav class="navbar navbar-inverse" id="header-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="Home.html" style="font-size: 30px; color: #dbe0e6">
+          <img src="img/jiit cafe logo.png" alt="logo" style="height: 80px; width: 80px"
+            class="pull-left visible-lg visible-md" />
+          <h3> JIITCAFE</h3>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#menu_section" style="font-size: 24px; color: #dbe0e6; text-align: center">
+              <i style="font-size: 30px; display: block" class="fas">&#xf518;</i>
+              Menu</a> 
+          </li>
+          <li>
+            <a href="#about_section" style="font-size: 24px; color: #dbe0e6; text-align: center">
+              <i style="font-size: 30px; display: block" class="material-icons">&#xe000;</i>About Us</a>
+          </li>
+          <li>
+            <a href="Profile.php" style="font-size: 24px; color: #dbe0e6; text-align: center">
+              <i style="font-size: 30px; display: block" class="fa">&#xf2bd;</i>
+              Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <br>
+  <br>
+  <br>
+  <div class="container bottom">
+    <div id="myCarousel" class="carousel slide box" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        
+        
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/cafe.jpg" alt="image" style="width: 90%; height: 80vh; margin-left: 5%;" />
+          <div class="carousel-caption">
+            <h3 class="color">Welcome to JIIT CAFE</h3>
+            <p>Have your food in a pleasant place</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/food.jpg" alt="image" style="width: 80%; height: 80vh; margin-left: 10%;" />
+          <div class="carousel-caption">
+            <h3 class="color">Get your favourate Snack</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/jiit.jpeg" alt="image" style="width: 90%; height: 80vh; margin-left: 5%;" />
+          <div class="carousel-caption">
+            <h3 class="color">JIIT :)</h3>
+          </div>
+        </div>
+        
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span></a>
+    </div>
+  </div>
+  <div class="container centering saying" id="menu_section">
+    <h3>Welcome to CAFE!!</h3>
+    <p>Hi amigo!</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 centering bottom">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/tea_stall.webp" alt="TEA" />
+              <div class="imgtext"> BEVERAGES</div>
+            </div>
+            <div class="flip-card-back">
+              <h3 class="bottom">Explore Beverages at JIIT Cafe</h3>
+              <a href="tea_stall.php">Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 centering bottom">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/roll_stall-removebg-preview.jpg" alt="ROLLS" />
+              <div class="imgtext">MEALS</div>
+            </div>
+            <div class="flip-card-back">
+              <h3 class="bottom">Explore Meals at JIIT Cafe</h3>
+              <!--<a href="roll_stall.html">Menu</a>-->
+              <a href="roll_stall.php">Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 centering bottom">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/grocery-removebg-preview.jpg" alt="grocery" />
+              <div class="imgtext">MUNCHABLES</div>
+            </div>
+            <div class="flip-card-back">
+              <h3 class="bottom">All Munchables available</h3>
+              <a href="grocery_stall.php">Buy Here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 centering bottom" id="fourth">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/samosa-removebg-preview.jpg" alt="Snacks" />
+              <div class="imgtext">SNACKS</div>
+            </div>
+            <div class="flip-card-back">
+              <h3 class="bottom">Best Snacks of JIIT</h3>
+              
+              <a href="snacks_stall.php">Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about_home">
+    <div>
+      <img class="about_img" src="img/jiit.jpeg" alt="rd" />
+    </div>
+    <div class="row justify-content-center" id="about_section">
+      <div class="about_all_text">
+          <h1 class="about_h">About Us</h1>
+          <div class="about_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, quisquam accusantium nostrum modi, nemo, officia veritatis ipsum facere maxime assumenda voluptatum enim! Labore maiores placeat impedit, vero sed est voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita alias dicta autem, maiores doloremque quo perferendis, ut obcaecati harum, <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum necessitatibus iste,
+              nulla recusandae porro minus nemo eaque cum repudiandae quidem voluptate magnam voluptatum? <br>Nobis, saepe sapiente omnis qui eligendi pariatur. quis voluptas. Assumenda facere adipisci quaerat. Illum doloremque quae omnis vitae.</p>
+              <p><b>Lonsectetur adipisicing elit. Blanditiis aspernatur, ratione dolore vero asperiores explicabo.</b></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ab itaque modi, reprehenderit fugit soluta, molestias optio repellat incidunt iure sed deserunt nemo magnam rem explicabo vitae. Cum, nostrum, quidem.</p>
+          </div>  
+        </div>
+  </div>
+  </div>
+  
+  
+  <footer class="page-footer font-small special-color-dark pt-4 bg-footer">
+    <div class="container">
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1" href="#">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1" href="#">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1" href="#">
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      Developers 🗿 :B-11 DBW PROJECT GROUP
+    </div>
+    <br>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
